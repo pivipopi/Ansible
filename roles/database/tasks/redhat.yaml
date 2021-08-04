@@ -20,7 +20,7 @@
         login_unix_socket: "{{ db['socket'] }}"
         name: "{{ db['user'] }}"
         password: "{{ db['passwd'] }}"
-        host: "{{ groups['wordpress'] }}"
+        host: "{{ groups['webserver'] }}"
         priv: "{{ db['name'] }}.*:ALL,GRANT"
         state: present
 

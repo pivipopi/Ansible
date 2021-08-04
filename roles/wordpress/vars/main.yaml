@@ -4,6 +4,7 @@ db:
   user: "wpadm"
   passwd: "P@ssw0rd"
 
+
 wp_ver: "5.8"
 wp:
   url: "https://wordpress.org/wordpress-{{ wp_ver }}.tar.gz"
@@ -11,6 +12,7 @@ wp:
   source: "/tmp/wordpress-{{ wp_ver }}.tar.gz"
   config: "/var/www/html/wordpress/wp-config.php"
 
-change_port: "80"
+
+service_port: "80"
 wp:
-  port: "{{ change_port }}"
+  port: "{{ service_port }}"

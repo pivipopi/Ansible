@@ -3,9 +3,4 @@ db:
   name: "wpdb"
   user: "wpadm"
   passwd: "P@ssw0rd"
-  host: "{{ groups['wordpress'] }}/32"
-  bind_address: "bind-adrress {{ groups['wordpress'] ]}"
-
-change_port: "80"
-wp:
-  port: "{{ change_port }}"
+  host: "{{ groups['webserver'] }}/32"

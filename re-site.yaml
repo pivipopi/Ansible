@@ -1,0 +1,9 @@
+- name: Configure DB
+  hosts: dbserver
+  roles:
+    - re_database
+
+- name: Configure Wordpress
+  hosts: webserver
+  roles:
+    - re_wordpress

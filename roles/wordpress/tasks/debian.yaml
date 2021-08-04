@@ -31,7 +31,7 @@
   unarchive:
     src: "{{ wp['source'] }}"
     dest: /var/www/html/
-    remote_src: true
+    remote_src: yes
 
 - name: Copy and Setting wp config php DB configuration
   template:
@@ -42,5 +42,6 @@
   template:
     src: ports.conf.j2
     dest: /etc/apache2/ports.conf
+    force: yes
   notify:
     - Apache2 Service Restart For Debian
