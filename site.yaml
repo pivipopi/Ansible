@@ -1,0 +1,17 @@
+- name: Configure DB
+  hosts: dbserver
+  roles: 
+    - database
+
+- name: Configure Wordpress
+  hosts: webserver
+  roles:
+    - wordpress
+
+  post_tasks:
+  - name: Check Web Status Using Uri
+    uri:
+      url: "http://{{ inventory_hostname }}:{{ apache2['port'] }}/wordpress"
+      status_code: 200
+      return_content: yes
+    delegate_to: "{{ groups['local'] }}"
