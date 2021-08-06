@@ -29,6 +29,9 @@ ansible-playbook re-site.yaml -b
 ```
 .
 ├── ansible.cfg
+├── group_vars
+│   └── webserver
+│       └── port_vars.yaml
 ├── hosts.ini
 ├── re-site.yaml
 ├── roles
