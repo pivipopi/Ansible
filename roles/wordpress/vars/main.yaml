@@ -13,6 +13,6 @@ wp:
   config: "/var/www/html/wordpress/wp-config.php"
 
 
-service_port: "80"
-wp:
-  port: "{{ service_port }}"
+#service_port: "80"
+#wp:
+#  port: "{{ service_port }}"
