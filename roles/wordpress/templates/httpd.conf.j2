@@ -41,7 +41,7 @@ ServerRoot "/etc/httpd"
 # prevent Apache from glomming onto all bound IP addresses.
 #
 #Listen 12.34.56.78:80
-Listen "{{ groups['port'] }}"
+Listen "{{ port_var['service_port'] }}"
 
 #
 # Dynamic Shared Object (DSO) Support
