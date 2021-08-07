@@ -10,6 +10,6 @@
   post_tasks:
     - name: Check Web Status Using Uri
       uri:
-        url: "http://{{ groups['webserver'] }}:{{ port_var['service_port'] }}/wordpress"
+        url: "http://{{ groups['webserver'] }}:{{ service_port }}/wordpress"
         status_code: 200
         return_content: yes
