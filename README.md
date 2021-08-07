@@ -11,6 +11,7 @@
 cat ansible.cfg     # 인벤토리 지정
 cat hosts.ini       # 호스트 그룹 확인
 
+group_vars/port_var.yaml             # 공용 포트 변수
 cat roles/database/vars/main.yaml    # 데이터 변수 확인
 cat roles/wordpress/vars/main.yaml   # 웹상의 워드프레스 설정과 포트 설정 확인
 ```
@@ -30,7 +31,6 @@ ansible-playbook re-site.yaml -b
 .
 ├── ansible.cfg
 ├── group_vars
-│   └── webserver
 │       └── port_vars.yaml
 ├── hosts.ini
 ├── re-site.yaml
