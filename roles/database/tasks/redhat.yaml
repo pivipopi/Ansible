@@ -2,6 +2,7 @@
   block:
     - name: Install Maria Package
       yum:
+        update_cache: true
         name: mariadb-server, python3-pymysql
         state: present
 
